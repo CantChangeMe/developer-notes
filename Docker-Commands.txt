@@ -11,5 +11,5 @@
 	ENTRYPOINT [ "java" ,"-jar" ,"docker-with-spring-boot-app.jar" ]
 	
 2.Run below commands:
-	2.1 docker build Dockerfile -t docker-with-spring-boot-app .
+	2.1 docker build -f Dockerfile -t docker-with-spring-boot-app .
 	2.2 docker run -p 8085:8085 docker-with-spring-boot-app
