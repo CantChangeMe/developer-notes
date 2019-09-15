@@ -1,0 +1,24 @@
+Commands(Steps) to push code from branch to master.
+1.Create branch and checkout from master
+git checkout -b new-branch-name
+
+and make changes to files
+2.Add to staging.
+git add file fileName.java or
+git add folder-Name
+
+3.Commit the code 
+git commit -m "commit changes"
+
+4.Push the changes to branch
+git push origin branch-to-add-in-reamme2
+
+5.Push these changes to master branch
+git push origin HEAD:master
+
+6.Now switch to master branch & take a pull
+git checkout master
+git pull
+
+
+
