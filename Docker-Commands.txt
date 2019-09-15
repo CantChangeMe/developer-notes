@@ -1,0 +1,15 @@
+#Creating spring boot project and running it on docker container:
+1.You have to create Dockerfile which has information about
+	1.1 Whats are image being used in your project and location to .jar ,.war file then
+	finally port on which you want to expose your app.
+	
+	i.e.
+	add below sample content in the Dockerfile:
+	FROM openjdk:8
+	ADD target/docker-with-spring-boot-app.jar docker-with-spring-boot-app.jar
+	EXPOSE 8085
+	ENTRYPOINT [ "java" ,"-jar" ,"docker-with-spring-boot-app.jar" ]
+	
+2.Run below commands:
+	2.1 docker build Dockerfile -t docker-with-spring-boot-app .
+	2.2 docker run -p 8085:8085 docker-with-spring-boot-app
