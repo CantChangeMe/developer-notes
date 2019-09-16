@@ -14,8 +14,17 @@
 	2.1 docker build -f Dockerfile -t docker-with-spring-boot-app .
 	2.2 docker run -p 8085:8085 docker-with-spring-boot-app
 	
-# Command to remove a container
+# Command to remove a container:
 docker rm -f CONTAINER_ID
  
 # Command stop all of the containers: 
 docker rm -f $(docker ps -a -q)
+
+# Command to remove an image forcibly:
+docker image rm -f ab29cfe213c6
+
+# Command to load image from .tar image file:
+docker load < springbootimage.tar
+
+
+
