@@ -16,3 +16,6 @@
 	
 # Command to remove a container
 docker rm -f CONTAINER_ID
+ 
+# Command stop all of the containers: 
+docker rm -f $(docker ps -a -q)
