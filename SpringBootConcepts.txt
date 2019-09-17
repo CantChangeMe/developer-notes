@@ -62,7 +62,7 @@ GetMapping is direct annotation for RequestMapping(method=RequestMethod.GET).
 Well, in the default interface we are only asked group name, artifact name and dependencies needed while we create spring boot app using spring initializer. However, for customizing anything else we can click on switch to full version to get the entire form. 
 
 17.	Where can I find the complete list of properties keys that can be configured in spring boot application.properties?
-Docs.spring.io/spring-boot/docs/current/reference/html/common-applicatoin-properties.html
+https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 
 18.	
 
