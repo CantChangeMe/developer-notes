@@ -1,0 +1,1 @@
+1.Syntactic fun aside, Streams are designed to work with potentially infinitely large data sets, whereas arrays, Collections, and nearly every Java SE class which implements Iterable are entirely in memory.
