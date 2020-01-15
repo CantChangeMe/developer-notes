@@ -20,5 +20,16 @@ git push origin HEAD:master
 git checkout master
 git pull
 
+#To see recent commits
+7.git log --oneline
+
+#To push after reset hard.
+8.git push -f origin feature/DEX-8664
+
+#
+
+
+
+
 
 
