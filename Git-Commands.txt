@@ -25,6 +25,12 @@ git pull
 2.Add the change
 3.Commit the change with message.
 
+#To see recent commits
+7.git log --oneline
+
+#To push after reset hard.
+8.git push -f origin feature/DEX-8664
+
 #Commit message best practices
 should be in present tense.
 git commit -m "Fixes a css issue."

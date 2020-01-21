@@ -1,0 +1,24 @@
+#Typical two tree architectures.
+===========
+Repository
+===========
+
+===========
+Working
+===========
+
+#Three tree architectures(Git architecture)
+===========
+Repository
+===========
+
+===========
+Staging index
+===========
+
+===========
+Working
+===========
+
+#Git workflow
+
