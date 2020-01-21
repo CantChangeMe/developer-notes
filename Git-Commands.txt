@@ -20,5 +20,15 @@ git push origin HEAD:master
 git checkout master
 git pull
 
+#Basic steps to commit a change in git
+1.Make change
+2.Add the change
+3.Commit the change with message.
 
+#Commit message best practices
+should be in present tense.
+git commit -m "Fixes a css issue."
+
+#Search commits by commit message
+git log --grep "Commits containing this message."
 
