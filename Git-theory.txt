@@ -28,3 +28,8 @@ One commit has reference to previous commit id if you change even commit message
 A pointer that points to current commit id in the  current branch.
 HEAD pointer points to current commit.
 HEAD : ref: refs/heads/{master}|{branch_name}
+
+#Untracked files:
+Files that git knows nothing about.
+
+#

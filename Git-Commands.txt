@@ -38,3 +38,16 @@ git commit -m "Fixes a css issue."
 #Search commits by commit message
 git log --grep "Commits containing this message."
 
+#Adding all files to Staging 
+git add .
+
+#Unstage a file 
+git reset HEAD fileName.js
+(content of fileName.js HEAD will replaced by 
+content in HEAD)
+
+#If you are working {branch | master} and you wish to discard changes 
+in working directory.
+git checkout -- fileName.js
+
+
