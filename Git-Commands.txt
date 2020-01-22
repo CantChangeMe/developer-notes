@@ -50,4 +50,18 @@ content in HEAD)
 in working directory.
 git checkout -- fileName.js
 
+#To show difference between working directory and staging
+git diff
+
+#To show difference between staging and repository
+git diff --staged
+or
+git diff --cached(not so populary used)
+
+#To delete a file from remote branch
+1.git rm -fileName.js(adds to staging as deleted)
+2.git commit -m "delete message."
+
+
+
 
