@@ -60,7 +60,7 @@ git diff --cached(not so populary used)
 
 #To delete a file from remote branch
 1.git rm -fileName.js(adds to staging as deleted)
-2.git commit -m "delete message."
+2.git commit -m "delete message"
 
 
 
