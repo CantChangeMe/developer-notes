@@ -68,6 +68,9 @@ git mv temp.txt temporary.text
 #Commit without adding to staging
 git commit -am "Commit message"
 
+#Compare two commits
+git diff oldCommitId..newCommitId
+
 
 
 
