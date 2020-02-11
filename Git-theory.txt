@@ -20,5 +20,18 @@ Staging index
 Working
 ===========
 
-#Git workflow
+#How git generates commit messages.
+It uses Hash values to generate commit Ids (SHA-1 algorithm).
+One commit has reference to previous commit id if you change even commit message.
 
+#HEAD
+A pointer that points to current commit id in the  current branch.
+HEAD pointer points to current commit.
+HEAD : ref: refs/heads/{master}|{branch_name}
+
+#Untracked files:
+Files that git knows nothing about.
+
+#multiline commits
+Just do not use -m option ,it will new editor file 
+where you can add multiline commit message
