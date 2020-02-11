@@ -34,4 +34,4 @@ Files that git knows nothing about.
 
 #multiline commits
 Just do not use -m option ,it will new editor file 
-where you can add multiline commit message
+where you can add multiline commit message.
