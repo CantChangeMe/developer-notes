@@ -27,8 +27,23 @@ git pull
 8.git push -f origin feature/DEX-8664
 
 #
+9.git reset --soft origin/develop
 
+#.The following untracked working tree files would be overwritten by merge, but I don't care
+10.git add * 
+git stash
+git pull
+This will track all files, remove all of your local changes to those files, and then get the files from the server.
 
+#
+11.Steps to squash commits:
+
+git pull origin develop
+git fetch
+git reset --soft origin/develop
+git add .
+git commit -m "Your final commit message here"
+git push -f origin your_branch_name
 
 
 
