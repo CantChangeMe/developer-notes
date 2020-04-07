@@ -31,46 +31,70 @@ git pull
 #To push after reset hard.
 8.git push -f origin feature/DEX-8664
 
+#
+9.git reset --soft origin/develop
+
+#.The following untracked working tree files would be overwritten by merge, but I don't care
+10.git add * 
+git stash
+git pull
+This will track all files, remove all of your local changes to those files, and then get the files from the server.
+
+#
+11.Steps to squash commits:
+
+git pull origin develop
+git fetch
+git reset --soft origin/develop
+git add .
+git commit -m "Your final commit message here"
+git push -f origin your_branch_name
+
+12.Command to delete unreferenced commits.
+
+git gc --prune=now
 #Commit message best practices
 should be in present tense.
 git commit -m "Fixes a css issue."
 
-#Search commits by commit message
+13.Search commits by commit message
 git log --grep "Commits containing this message."
 
-#Adding all files to Staging 
+14.Adding all files to Staging 
 git add .
 
-#Unstage a file 
+15.Unstage a file 
 git reset HEAD fileName.js
 (content of fileName.js HEAD will replaced by 
 content in HEAD)
 
-#If you are working {branch | master} and you wish to discard changes 
+16.If you are working {branch | master} and you wish to discard changes 
 in working directory.
 git checkout -- fileName.js
 
-#To show difference between working directory and staging
+17.To show difference between working directory and staging
 git diff
 
-#To show difference between staging and repository
+17.To show difference between staging and repository
 git diff --staged
 or
 git diff --cached(not so populary used)
 
-#To delete a file from remote branch
+18.To delete a file from remote branch
 1.git rm -fileName.js(adds to staging as deleted)
 2.git commit -m "delete message"
 
-#Move and rename files
+19.Move and rename files
 git mv temp.txt temporary.text
 
-#Commit without adding to staging
+20.Commit without adding to staging
 git commit -am "Commit message"
 
-#Compare two commits
+21.Compare two commits
 git diff oldCommitId..newCommitId
 
+22.Update local references
+git remote prune origin
 
 
 

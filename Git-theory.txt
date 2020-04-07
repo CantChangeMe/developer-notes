@@ -35,3 +35,6 @@ Files that git knows nothing about.
 #multiline commits
 Just do not use -m option ,it will new editor file 
 where you can add multiline commit message.
+
+#Amend command only amends most recent commit.
+where you can add multiline commit message.
