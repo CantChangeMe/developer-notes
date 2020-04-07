@@ -45,6 +45,14 @@ git add .
 git commit -m "Your final commit message here"
 git push -f origin your_branch_name
 
+12.Command to delete unreferenced commits.
+
+git gc --prune=now
+
+
+13.Update local references
+git remote prune origin
+
 
 
 
