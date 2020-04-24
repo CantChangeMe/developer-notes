@@ -11,3 +11,15 @@ application-prod.properties
 
 
 3.Spring boot app + ELK stack.
+
+4.IOC:
+1.
+public class SortingAlgorithImpl{
+	BubbleSortAlgorithm bsa =  new BubbleSortAlgorithm ();
+}
+2.
+@Component
+public class SortingAlgorithImpl{
+	@Autowired
+	SortingAlgorthim sortingAlgorthim ;
+}
