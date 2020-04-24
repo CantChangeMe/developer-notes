@@ -8,4 +8,6 @@ application-prod.properties
 
   2.1 Either you access them using @Value annotation or 
   2.2 You define a component with @ConfigurationProperties annotation.And autowire this bean wherever you want.This approach seems better.
-  
+
+
+3.Spring boot app + ELK stack.
