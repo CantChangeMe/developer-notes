@@ -101,7 +101,7 @@ $git init
 $git add .
 $git commit -m "Your initial message"
 $git remote add origin "you github repo URL here."
-$git remove -v (Displays you)
+$git remove -v (Displays your repo URL)
 $git push origin master
 
 
