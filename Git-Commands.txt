@@ -96,6 +96,13 @@ git diff oldCommitId..newCommitId
 22.Update local references
 git remote prune origin
 
+23.Importing your project to github
+$git init
+$git add .
+$git commit -m "Your initial message"
+$git remote add origin "you github repo URL here."
+$git remove -v (Displays you)
+$git push origin master
 
 
 
