@@ -104,5 +104,8 @@ $git remote add origin "you github repo URL here."
 $git remove -v (Displays your repo URL)
 $git push origin master
 
+24.
+
+
 
 
