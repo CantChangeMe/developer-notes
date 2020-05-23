@@ -68,4 +68,5 @@ Enable auto-configuration of the Spring Application Context, attempting to guess
 Auto-configuration classes are usuallyapplied based on your classpath and what beans you have defined.
 For example, if youhave tomcat-embedded.jar on your classpath you are likely to want a TomcatServletWebServerFactory (unless you have defined your own ServletWebServerFactory bean). 
 
-
+11.Spring Cloud Sleuth
+A powerful tool for enhancing logs in any application, but especially in a system built up of multiple services.
