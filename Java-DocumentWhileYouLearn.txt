@@ -4,7 +4,7 @@
 2.1 Make sure lombok jar in your classpath
 2.2 Congigure eclipse( STS) to point to Lombok jar using below command:
 java -jar lombok-1.18.8.jar
-
+3.If you get any error while using setters  and getters you can remove scope from maven dependency of lombok.
 ========
 
   
