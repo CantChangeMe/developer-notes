@@ -6,6 +6,11 @@
 java -jar lombok-1.18.8.jar
 3.If you get any error while using setters  and getters you can remove scope from maven dependency of lombok.
 ========
-
+4.To set up develop env for latest version of java(Java 14).
+1.Install jdk14
+2.Set java_home
+3.Set path variable.
+4.Install lastest eclise.
+5.Install java14 support plugin 
   
  
