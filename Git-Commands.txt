@@ -97,5 +97,24 @@ git diff oldCommitId..newCommitId
 git remote prune origin
 
 
+23.
+
+-
+24.Create pull request for two branches:
+  $git push origin branch_one
+  $git  fetch
+  $git pull origin develop
+  $git reset --soft origin/develop
+  $git stash save "creating pr for DEX-11385_v2"
+  $git  checkout release/rc-b2c-sit
+  $git pull
+  $git checkout -b bugfix/DEX-11385_v2_rc
+  $git stash list
+  $git stash apply
+  $git add .
+  $git commit -m "bigfix/DEX-11385_v2_rc"
+  $git push origin bugfix/DEX-11385_v2_rc
+  $git push origin bugfix/DEX-11385_v2_rc --no-verify
+
 
 
