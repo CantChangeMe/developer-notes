@@ -1,8 +1,10 @@
 Status Code Definitions
+<pre>
 1.Informational 1xx
 This class of status code indicates a provisional response, consisting only of the Status-Line and optional headers, and is terminated by an empty line. There are no required headers for this class of status code. Since HTTP/1.0 did not define any 1xx status codes, servers MUST NOT send a 1xx response to an HTTP/1.0 client except under experimental conditions.
 A client MUST be prepared to accept one or more 1xx status responses prior to a regular response, even if the client does not expect a 100 (Continue) status message. Unexpected 1xx status responses MAY be ignored by a user agent.
-
+</pre>
+<pre>
 2. Successful 2xx
 This class of status code indicates that the client's request was successfully received, understood, and accepted.
 
@@ -12,13 +14,15 @@ This class of status code indicates that the client's request was successfully r
 The request has been accepted for processing, but the processing has not been completed.
 The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place.
 There is no facility for re-sending a status code from an asynchronous operation such as this.
-
+</pre>
+<pre>
 3.Redirection 3xx
 
 301 Moved Permanently
 302 Found
 The requested resource resides temporarily under a different URI.
-
+</pre>
+<pre>
 4.Client Error 4xx
 400 Bad Request
 The request could not be understood by the server due to malformed syntax.
@@ -29,7 +33,8 @@ The client SHOULD NOT repeat the request without modifications.
 405 Method Not Allowed
 406 Not Acceptable
 408 Request Timeout
-
+</pre>
+<pre>
 5.Server Error 5xx
 Response status codes beginning with the digit "5" indicate cases in which 
 the server is aware that it has erred or is incapable of performing the request
@@ -49,4 +54,4 @@ The server is currently unable to handle the request due to a temporary overload
 504 Gateway Timeout
 The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server specified by the URI (e.g. HTTP, FTP, LDAP) or
 some other auxiliary server (e.g. DNS) it needed to access in attempting to complete the request.
-
+</pre>
