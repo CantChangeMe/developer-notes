@@ -61,7 +61,7 @@ can be ordered using the Orderedinterface or @Order annotation.
 10.@SpringBootConfiguration
 
 Indicates that a class provides Spring Boot application @Configuration.
-Can be used as an alternative to the Spring'sstandard @Configuration annotation so that configuration can be foundautomatically (for example in tests). 
+Can be used as an alternative to the Spring's standard @Configuration annotation so that configuration can be found automatically (for example in tests). 
 11.@EnableAutoConfiguration
 
 Enable auto-configuration of the Spring Application Context, attempting to guess andconfigure beans that you are likely to need.
