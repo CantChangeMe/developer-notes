@@ -16,3 +16,12 @@
 |HashTables/SynchronizedMaps|ConcurrentHashMap  |
 |---------|---------|
 |Whole Map is locked in case of HashTables/SynchronizedMaps.|locking particular portion/ segment|
+
+# Fail fast and fail safe iterators
+
+|Fail fast iterators|Fail safe iterators|
+|---------|---------|
+|If you try to modify the collection by means other than iterator's remove method ,then you get ConcurrentModificationException |
+1.It does not throw exception.
+2. They will not reflect the latest state of the collection.
+3. It requires extra memory as it clones the collection.|
