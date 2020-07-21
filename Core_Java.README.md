@@ -2,7 +2,7 @@
 |Collections.synchronizedMap| Hashtable|
 |---------------------------|----------|
 |Methods are synchronized at block level using mutex|synchronization is on method level|
-
+|The developer is allowed to pass another object of the mutex as a second argument by which the lock on the Map methods would be only on that Object and hence less restrictive| More restrictive than synchronized map locking in Collections.synchronizedMap can be done at object level while constructing Map.If object is not provided then|
 
 # Difference between Hashtable and HashMap
 |Hashtable|HashMap  |
