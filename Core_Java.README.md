@@ -21,7 +21,4 @@
 
 |Fail fast iterators|Fail safe iterators|
 |---------|---------|
-|If you try to modify the collection by means other than iterator's remove method ,then you get ConcurrentModificationException |
-1.It does not throw exception.
-2. They will not reflect the latest state of the collection.
-3. It requires extra memory as it clones the collection.|
+|If you try to modify the collection by means other than iterator's remove method ,then you get ConcurrentModificationException|It does not throw exception.They will not reflect the latest state of the collection.It requires extra memory as it clones the collection.|
