@@ -22,3 +22,4 @@
 |Fail fast iterators|Fail safe iterators|
 |---------|---------|
 |If you try to modify the collection by means other than iterator's remove method ,then you get ConcurrentModificationException| Downside is ,it does not throw exception.They will not reflect the latest state of the collection.It requires extra memory as it clones the collection.|
+|ArrayList, HashMap|CopyOnWriteArrayList, ConcurrentHashMap|
