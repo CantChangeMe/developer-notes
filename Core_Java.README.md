@@ -68,14 +68,37 @@
     An 'immutable' object is one whose instance cannot be changed once created.
     
     ## How to ensure ‘immutability’?
+        -Make class itself final ,so that it can not be extented.
+        
         -All fields (member variables) should be made private and final
         
         -Do not provide any ‘setter‘ methods (mutators)
         
-        -Don’t allow your class to be extended – you can either declare the class final or make the constructor private. In case you choose to use a private constructor, use a           static factory method to create instances for the clients (in a defensive manner of course!)
+        -initializing all non-primitive mutable fields via constructor by performing a deep copy;
         
         -Make defensive copies of any ‘mutable’ members which you might have as a part of your class i.e. do not provide direct access to the references of the mutable members.           Otherwise, the client API may unknowingly change the state of the mutable object which you returned which in turn will create loads of other issues
-    
+      
+        When?
+            You should consider immutability of your classes if you need:
+            1.Safety:
+                You, as a developer, can be sure that no one is able to change their state;
+            2.Thread safety:
+                Immutable objects do not need synchronization and are unharmed even during concurrent access by multiple threads.
+            2.Simplicity: 
+                Dealing with classes which would encapsulate your immutable object
+            3.In Hash based collections for keys:
+                Such immutable classes could be safely put inside the hash collections (like HashMap, HashSet etc) - of course, if equals() & hashCode() methods are overridden                     in a proper way.
+                Immutable objects are good Map keys and Set elements, since these typically do not change once created.
+            4.In caching:
+                References to immutable objects can be cached as they are not going to change.
+            
+        Examples from JDK:
+            The Java platform libraries contain many immutable classes,
+                String,
+                the boxed primitive classes,
+                BigInteger,
+                BigDecimal. 
+        
  </pre>
  
        
