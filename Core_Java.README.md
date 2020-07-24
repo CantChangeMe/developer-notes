@@ -23,3 +23,43 @@
 |---------|---------|
 |If you try to modify the collection by means other than iterator's remove method ,then you get ConcurrentModificationException| Downside is ,it does not throw exception.They will not reflect the latest state of the collection.It requires extra memory as it clones the collection.|
 |ArrayList, HashMap|CopyOnWriteArrayList, ConcurrentHashMap|
+
+# Serialization
+<pre>
+    sequence of bytes = object’s data + information about the object’s type + the types of data stored in the object. 
+    
+    Main classes:
+    ObjectInputStream and ObjectOutputStream
+    
+    Need of Serialization?
+          1.when there is need to send your data(By data I mean objects and not text.) over network or to store in files
+          2.Network infrastructure and your Hard disk are hardware components that understand bits and bytes but not Java objects.
+    
+    What happens:
+        Case 1-What if an object has a reference to other objects
+            Yes,You don’t have to explicitly serialize reference objects.When you serialize any object and if it contain any other object reference then Java serialization                   serialize that object’s entire object graph.
+        Case 2:What if you don’t have access to reference object’s source code(e.g you don’t have access to above Address class)
+            yes there is,You can create another class which extends address and make it serialzable but It can fails in many cases:
+            What if class is declared as final
+            What if class have reference to other non serializable object.
+   
+        Case 3:What if you still want to save state of reference object(e.g above address object):
+            Java serialization provides a mechanism such that if you have private methods with particular signature then they will get called during serialization and                       deserialization so if we provide writeObject and readObject method of employee class and they will be called during serialization and deserialization of Employee                 object.
+        
+            *One thing should be kept in mind that ObjectInputStream should read data in same sequence in which we have written data to ObjectOutputStream in writeObject and                 readObject method.
+        Case 4: What if superclass is Serializable?
+             If superclass is serialzable then all its subclasses are automatically serializable.
+
+            *If superclass is not Serializable then all values of the instance variables inherited from super class will be initialized by calling constructor of Non-                        Serializable Super class during deserialization process
+            
+       Case 6-What if superclass is Serializable but you don’t want subclass to be Serializable
+             If you don’t want subclass to be Serializable then you need to implement writeObject() and readObject() method in subclass and need to throw                                      NotSerializableException from these methods.
+            
+       Case 7-Can you Serialize static variables?
+              No, you can’t. As you know static variable is at a class level not at the object level and you serialize an object so you can’t serialize static variables.
+              
+              
+       **Externalizable interface can be used in place of serializable if you want more control over serialization. You can read more about it at Externalizable in java.
+       
+ </pre>
+       
