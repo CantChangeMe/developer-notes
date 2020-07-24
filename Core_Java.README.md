@@ -62,4 +62,20 @@
        **Externalizable interface can be used in place of serializable if you want more control over serialization. You can read more about it at Externalizable in java.
        
  </pre>
+ 
+ <pre>
+ # Immutable object:
+    An 'immutable' object is one whose instance cannot be changed once created.
+    
+    ## How to ensure ‘immutability’?
+        -All fields (member variables) should be made private and final
+        
+        -Do not provide any ‘setter‘ methods (mutators)
+        
+        -Don’t allow your class to be extended – you can either declare the class final or make the constructor private. In case you choose to use a private constructor, use a           static factory method to create instances for the clients (in a defensive manner of course!)
+        
+        -Make defensive copies of any ‘mutable’ members which you might have as a part of your class i.e. do not provide direct access to the references of the mutable members.           Otherwise, the client API may unknowingly change the state of the mutable object which you returned which in turn will create loads of other issues
+    
+ </pre>
+ 
        
