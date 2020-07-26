@@ -115,3 +115,14 @@
  ||Can only be traversed using internal iterator|
  
  
+ # Stream API functions:
+ 
+    Terminal operations: collect(), reduce() 
+    
+    -- map() , flatMap(),  distinct() ,count() , sorted() ,peek()//peek() is used to debug.
+    -- Custom sorting sort(Comparator.comparing(Stundent::getName).reversed()).collect(Collectors.collect(toList()));
+    -- filter()
+    
+ 
+ 
+ 
