@@ -161,4 +161,9 @@ public class Main
     } 
 } 
 
+Advantages:
+    --  It helps to avoid confusing type casts present in the class hierarchy and thus making the code readable, usable and maintainable.
+    --  We get a liberty to have more specific return types when overriding methods.
+    --  Help in preventing run-time ClassCastExceptions on returns
+
 </pre>
