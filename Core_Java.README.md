@@ -176,3 +176,54 @@ Advantages:
         2.1 Unchecked exceptions extend RuntimeException and do not need to be declared or caught. 
         2.2 It is also possible to create an unchecked exception by extending Error or one of it subclasses, but these exceptions are by convention reserved for use by the JDK.
 </pre>
+
+# Difference between Inheritance and Composition in Java OOPS
+    1) Static vs Dynamic
+    When you use Inheritance, you have to define which class you are extending in code, it cannot be changed at runtime, but with Composition you just define a Type which you       want to use, which can hold its different implementation. In this sense, Composition is much more flexible than Inheritance.
+    
+    2) Limited code reuse with Inheritance
+    with Inheritance you can only extend one class, which means you code can only reuse just one class, not more than one. If you want to leverage functionalities from multiple     class, you must use Composition. For example, if your code needs authentication functionality, you can use an Authenticater, for authorization you can use an Authorizer etc,     but with Inheritance you just stuck with only class, Why? because Java doesn't support multiple Inheritance.
+
+    3) Unit Testing
+    When you design classes using Composition they are easier to test because you can supply mock implementation of the classes you are using but when you design your class         using Inheritance, you must need parent class in order to test child class. Their is no way you can provide mock implementation of parent clas
+
+    4) Final classes
+    Composition allows code reuse even from final classes, which is not possible using Inheritance because you cannot extend final class in Java, which is necessary for             Inheritance to reuse code.
+
+    5) Encapsulation
+    Last difference between Composition and Inheritance in Java in this list comes from Encapsulation and robustness point of view. Though both Inheritance and Composition           allows code reuse, Inheritance breaks encapsulation because in case of Inheritance, sub class is dependent upon super class behavior. If parent classes changes its behavior     than child class is also get affected
+    
+  
+# Why Java doesn't support multiple inheritance
+
+    1.First reason is ambiguity around Diamond problem, consider a class A has foo() method and then B and C derived from A and has there own foo() implementation and now class     D derive from B and C using multiple inheritance and if we refer just foo() compiler will not be able to decide which foo() it should invoke. 
+
+    This is also called Diamond problem because structure on this inheritance scenario is similar to 4 edge diamond, see below
+
+             A foo()
+               / \
+              /   \
+         foo() B     C foo()
+              \   /
+               \ /
+                D
+              foo()
+
+       2) Second and more convincing reason to me is that multiple inheritances does complicate the design and creates problem during casting, constructor chaining etc and given        that there are not many scenario on which you need multiple inheritances its wise decision to omit it for the sake of simplicity. 
+       
+       
+# Why String is Immutable or Final in Java
+
+    1) Imagine String pool facility without making string immutable , its not possible at all because in case of string pool one string object/literal e.g. "Test" has referenced       by many reference variables, so if any one of them change the value others will be automatically gets affected i.e. lets say
+
+    String A = "Test"
+    String B = "Test"
+
+    Now String B called, B.toUpperCase() which change the same object into "TEST", so A will also be "TEST" which is not desirable.
+    2) String has been widely used as parameter for many Java classes e.g. for opening network connection, you can pass hostname and port number as string, you can pass database       URL as a string for opening database connection, you can open any file in Java by passing the name of the file as argument to File I/O classes.
+
+    In case, if String is not immutable, this would lead serious security threat, I mean someone can access to any file for which he has authorization, and then can change the         file name either deliberately or accidentally and gain access to that file.
+    
+    3)Since String is immutable it can safely share between many threads which is very important for multithreaded programming and to avoid any synchronization issues in Java,         Immutability also makes String instance thread-safe in Java, means you don't need to synchronize String operation externally.
+    4) Another reason of Why String is immutable in Java is to allow String to cache its hashcode, being immutable String in Java caches its hashcode, and do not calculate every       time we call hashcode method of String, which makes it very fast as hashmap key to be used in hashmap in Java. 
+    5) The absolutely most important reason that String is immutable is that it is used by the class loading mechanism, and thus have profound and fundamental security aspects.     Had String been mutable, a request to load "java.io.Writer" could have been changed to load "mil.vogoon.DiskErasingWriter"
