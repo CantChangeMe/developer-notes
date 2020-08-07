@@ -227,3 +227,10 @@ Advantages:
     3)Since String is immutable it can safely share between many threads which is very important for multithreaded programming and to avoid any synchronization issues in Java,         Immutability also makes String instance thread-safe in Java, means you don't need to synchronize String operation externally.
     4) Another reason of Why String is immutable in Java is to allow String to cache its hashcode, being immutable String in Java caches its hashcode, and do not calculate every       time we call hashcode method of String, which makes it very fast as hashmap key to be used in hashmap in Java. 
     5) The absolutely most important reason that String is immutable is that it is used by the class loading mechanism, and thus have profound and fundamental security aspects.     Had String been mutable, a request to load "java.io.Writer" could have been changed to load "mil.vogoon.DiskErasingWriter"
+    
+    
+    
+# Why default methods in Java 8?
+    Default methods were added for backward compatibility for Old interfaces so that they can have multiple methods without breaking existing code.
+    
+    
