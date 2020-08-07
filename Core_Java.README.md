@@ -167,3 +167,12 @@ Advantages:
     --  Help in preventing run-time ClassCastExceptions on returns
 
 </pre>
+<pre>
+# Exception handling in Java.
+
+    1.If you extend Exception then it is "checked", i.e if you throw it, it must be caught or declared in the method signature.
+
+    2.
+        2.1 Unchecked exceptions extend RuntimeException and do not need to be declared or caught. 
+        2.2 It is also possible to create an unchecked exception by extending Error or one of it subclasses, but these exceptions are by convention reserved for use by the JDK.
+</pre>
