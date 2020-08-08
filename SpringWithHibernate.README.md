@@ -59,6 +59,43 @@ Spring bool dev tools:
 	A-Atomicity-  All changes done by a transation should completely successful ,or changes should be reverted back.For
 					example, if a transaction has 10 steps then all suceed or changes by all of them should be reverted back
 	C-Consistency-Any transaction should leave system in consistent state
-	I-Isolation- How changes within a transaction are visible.
+	I-Isolation- How changes within a transaction are visible.How much visbility you want to provide.
 	D-Durability-Once transaction is complete, all changes made should be persisted and it should remain even after system failure.
 	
+# Isolation problems:Dirty read , Non repeatable read , Phanton read
+
+     1.Dirty read - Reading uncommited changes of another transaction in current transaction.
+     2.Non repeatable read - While reading twice in the same transaction and getting different values for a row. Update to the row is done by a different transaction.
+     3.Phanton read - While reading twice in the same transaction and getting different number of rows. Insertion or deletion is done by a different transaction.
+
+	
+# Isolation levels:
+	Read Uncommited-
+		Solves none
+	Read commited-
+		Solves all Isolation problems:Dirty read
+	Repeatable read-
+		Solves all Isolation problems:Dirty read , Non repeatable read
+	Serializable- 
+		-Solves all Isolation problems:Dirty read , Non repeatable read , Phanton read
+		-locks entire row matching the condition
+		-slow for "select *" query
+		
+		
+# Which @Transactional to use one provided by Spring or JPA
+	When using different databases , message queues ,user Spring one:
+		-database 1
+		-database 2
+		-MQ
+		- JMS Messages
+		
+	   Here you provide isolation isolation.@Transactional(isolation=READ_COMMITED)	
+	   When setting isolation level in properties file
+	            DEFAULT(-1),
+		    READ_UNCOMMITTED(1),
+		    READ_COMMITTED(2),
+		    REPEATABLE_READ(4),
+		    SERIALIZABLE(8);
+	When using single database use JPA one
+		-database
+			updare
