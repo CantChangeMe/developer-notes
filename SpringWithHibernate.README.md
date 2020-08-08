@@ -1,4 +1,4 @@
-# Spring with hibernate:
+## Spring with hibernate:
 
 # What is autoconfiguratin?
 You understand by knowing how you were able to create rest API just by adding Web dependency.
