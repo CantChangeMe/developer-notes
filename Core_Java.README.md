@@ -110,7 +110,7 @@
  |-----------|-------|
  |Can add and modify elements at any point of time| Can not remove or add elements once stream is created |
  |Elements can be accessed in any order | Can only be accessed sequencially|  
- |Early constructed|Lazily constructed.Intermeditate operation are called only if terminal operator is called|  
+ |Eagerly constructed|Lazily constructed.Intermeditate operation are called only if terminal operator is called|  
  |Can be traversed any number of times| Can be traversed only once|
  ||Can only be traversed using internal iterator|
  
